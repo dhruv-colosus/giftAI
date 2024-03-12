@@ -1,79 +1,13 @@
 import React, { useState } from "react";
 import "./App.css"; // Import your CSS files here
 import GiftForm from "./components/GiftForm";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [giftCost, setGiftCost] = useState("$40");
-  const [selectedCompany, setSelectedCompany] = useState("Walmart");
-  const [selectedAmount, setSelectedAmount] = useState("5");
-  const [receiverEmail, setReceiverEmail] = useState("");
-
-  const handleCompanyChange = (event) => {
-    setSelectedCompany(event.target.value);
-  };
-
-  const handleAmountChange = (event) => {
-    setSelectedAmount(event.target.value);
-  };
-
-  const handleEmailChange = (event) => {
-    setReceiverEmail(event.target.value);
-  };
-
-  const openNav = () => {
-    document.getElementById("myNav").style.width = "100%";
-  };
-
-  const closeNav = () => {
-    document.getElementById("myNav").style.width = "0%";
-  };
-
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-  };
-
   return (
     <div>
       <header>
-        <div className="navbar">
-          <div id="myNav" className="overlay">
-            <a
-              href="javascript:void(0)"
-              className="closebtn"
-              onClick={closeNav}
-            >
-              &times;
-            </a>
-            <div className="overlay-content" onClick={closeNav}>
-              <a href="#about">ABOUT</a>
-              <a href="#gift">BUY GIFT CARDS</a>
-              <a href="#contact">SOCIALS</a>
-            </div>
-          </div>
-          <img src="./logoo.png" className="logo" alt="" />
-          <span
-            style={{ fontSize: "30px", cursor: "pointer" }}
-            onClick={openNav}
-          >
-            &#9776;
-          </span>
-
-          <ul className="nav-links">
-            <li>
-              <a href="#about">ABOUT</a>
-            </li>
-            <li>
-              <a href="#gift">BUY GIFT CARDS</a>
-            </li>
-            <li>
-              <a href="#contact">SOCIALS</a>
-            </li>
-          </ul>
-          <a href="" target="_blank" className="hidea">
-            <button className="btn2">TRY THE BOT</button>
-          </a>
-        </div>
+        <Navbar />
       </header>
 
       <section id="hero" className="hero hell">

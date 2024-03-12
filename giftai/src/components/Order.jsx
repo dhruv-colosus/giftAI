@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import BigNumber from "bignumber.js";
 import { API_URL } from "./Constants";
+import Navbar from "./Navbar";
 
 const Order = () => {
   const [searchParams] = useSearchParams();
@@ -86,53 +87,10 @@ const Order = () => {
     qrContainer.appendChild(img);
   };
 
-  const handleCloseNav = () => {
-    const overlay = document.getElementById("myNav");
-    overlay.style.width = "0%";
-  };
-
-  const openNav = () => {
-    const overlay = document.getElementById("myNav");
-    overlay.style.width = "100%";
-  };
-
   return (
     <>
       <section id="hero" className="hero hell">
-        <div className="navbar">
-          <div id="myNav" className="overlay">
-            <a href="#" className="closebtn" onClick={handleCloseNav}>
-              &times;
-            </a>
-            <div className="overlay-content" onClick={handleCloseNav}>
-              <a href="#about">ABOUT</a>
-              <a href="#gift">BUY GIFT CARDS</a>
-              <a href="#contact">SOCIALS</a>
-            </div>
-          </div>
-          <img src="./public/logoo.png" className="logo" alt="" />
-          <span
-            style={{ fontSize: "30px", cursor: "pointer" }}
-            onClick={openNav}
-          >
-            &#9776;
-          </span>
-
-          <ul className="nav-links">
-            <li>
-              <a href="#about">ABOUT</a>
-            </li>
-            <li>
-              <a href="#gift">BUY GIFT CARDS</a>
-            </li>
-            <li>
-              <a href="#contact">SOCIALS</a>
-            </li>
-          </ul>
-          <a href="" target="_blank" className="hidea">
-            <button className="btn2">TRY THE BOT</button>
-          </a>
-        </div>
+        <Navbar />
       </section>
       <section className="main">
         <h1>Scan QR Code</h1>

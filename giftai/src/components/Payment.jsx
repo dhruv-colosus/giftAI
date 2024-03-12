@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { API_URL } from "./Constants";
+import Navbar from "./Navbar";
 
 function Payment() {
   const [formData, setFormData] = useState({
@@ -58,44 +59,7 @@ function Payment() {
   return (
     <>
       <section id="hero" className="hero hell">
-        <div className="navbar">
-          <div id="myNav" className="overlay">
-            <a
-              href="javascript:void(0)"
-              className="closebtn"
-              onClick={() => closeNav()}
-            >
-              &times;
-            </a>
-            <div className="overlay-content" onClick={() => closeNav()}>
-              <a href="#about">ABOUT</a>
-              <a href="#gift">BUY GIFT CARDS</a>
-              <a href="#contact">SOCIALS</a>
-            </div>
-          </div>
-          <img src="./public/logoo.png" className="logo" alt="" />
-          <span
-            style={{ fontSize: "30px", cursor: "pointer" }}
-            onClick={() => openNav()}
-          >
-            &#9776;
-          </span>
-
-          <ul className="nav-links">
-            <li>
-              <a href="#about">ABOUT</a>
-            </li>
-            <li>
-              <a href="#gift">BUY GIFT CARDS</a>
-            </li>
-            <li>
-              <a href="#contact">SOCIALS</a>
-            </li>
-          </ul>
-          <a href="" target="_blank" className="hidea">
-            <button className="btn2">TRY THE BOT</button>
-          </a>
-        </div>
+        <Navbar />
       </section>
       <section className="main">
         <h1>Complete Payment</h1>
