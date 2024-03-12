@@ -5,6 +5,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Payment from "./components/Payment.jsx";
 import Order from "./components/Order.jsx";
+import CreateProfile from "./components/CreateProfile.jsx";
+import Username from "./components/Username.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
   {
     path: "/order",
     element: <Order />,
+  },
+  {
+    path: "/createprofile",
+    element: <CreateProfile />,
+  },
+  {
+    path: "/username",
+    element: <Username />,
   },
 ]);
 

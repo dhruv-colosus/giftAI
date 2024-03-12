@@ -22,7 +22,7 @@ function Navbar() {
         </div>
       </div>
       <Link to="/">
-        <img src="./public/logoo.png" className="logo" alt="" />
+        <img src="/logoo.png" className="logo" alt="" />
       </Link>
       <span style={{ fontSize: "30px", cursor: "pointer" }} onClick={openNav}>
         &#9776;

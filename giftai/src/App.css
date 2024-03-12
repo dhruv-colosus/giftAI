@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url("./public/mainbg.png");
+  background-image: url("/mainbg.png");
 
   background-position: center;
   position: relative;
@@ -547,6 +547,39 @@ body {
   background-color: #f0f0f050;
 }
 /* GIFT END */
+/* RECIEVE START */
+.recieve {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 7rem 5rem;
+}
+.recieve h1 {
+  font-family: "Neue Machina";
+  font-size: 2.5rem;
+}
+.recieve h1 span {
+  color: #ef3059;
+}
+.btnr {
+  background-color: #ef3059;
+
+  /* background-color: linear-gradient(to right, #ffffff, #000000); */
+  color: #fff;
+  padding: 0.9rem 3rem;
+  border-radius: 10rem;
+  font-size: 0.8rem;
+  font-family: gilroy;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: all 0.7s ease;
+}
+.btnr:hover {
+  background: #ea0839;
+}
+/* RECIEVE END */
 /* FOOTER START */
 
 .footer {
@@ -664,9 +697,56 @@ body {
   color: #ef3059;
 }
 /* PAYMENT END */
+
+/* Create Profile Start*/
+.createprofile {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  color: white;
+  font-family: "Gilroy";
+}
+.createprofile h1 {
+  margin-bottom: 2.5rem;
+  font-family: "Neue Machina";
+  font-size: 2.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+.createprofile h1 span {
+  color: #ef3059;
+}
+.createprofile form {
+  align-items: center;
+  margin: auto;
+}
+.extras {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin-bottom: 1rem;
+}
+.profilesection {
+}
+.profilesection img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+}
+.profilesection h2 {
+  font-family: "Neue Machina";
+  font-size: 2rem;
+  margin: 1rem 0 0 0;
+}
+.profilesection p {
+  margin: 0 0 1rem 0;
+  color: #727272;
+}
+
+/* Create Profile End*/
+
 @media only screen and (max-width: 790px) {
   body {
-    background-image: url("./public/mainbgphone.png");
+    background-image: url("/mainbgphone.png");
   }
   .hero-bg-2 {
     position: absolute;
@@ -871,6 +951,17 @@ body {
   }
   .comcard h5 {
     font-size: 0.9rem;
+  }
+  .recieve {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 7rem 3rem;
+  }
+  .recieve h1 {
+    margin-bottom: 2rem;
+    text-align: center;
   }
 }
 

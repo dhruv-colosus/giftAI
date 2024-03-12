@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css"; // Import your CSS files here
 import GiftForm from "./components/GiftForm";
 import Navbar from "./components/Navbar";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -9,7 +10,6 @@ function App() {
       <header>
         <Navbar />
       </header>
-
       <section id="hero" className="hero hell">
         <div className="hero-content">
           <div className="lefthero">
@@ -33,14 +33,13 @@ function App() {
           <img src="./scrolldown.png" alt="Scroll Down" />
         </div>
       </section>
-
       <section className="about" id="about">
         <h1>
           About <span>Us</span>
         </h1>
         <div className="features">
           <div className="card">
-            <img src="./public/giftybb.png" />
+            <img src="/giftybb.png" />
             <h3>Wide Selection</h3>
             <p>
               Cards for in-app purchases such as Itunes? Or perhaps want to pay
@@ -50,7 +49,7 @@ function App() {
             </p>
           </div>
           <div className="card">
-            <img src="./public/nomsg.png" />
+            <img src="/nomsg.png" />
             <h3>Anonymous Transactions</h3>
             <p>
               No Sign Up, No KYC, nothing of that sort. Pay with crypto, and
@@ -58,7 +57,7 @@ function App() {
             </p>
           </div>
           <div className="card">
-            <img src="./public/callno.png" />
+            <img src="/callno.png" />
             <h3>Multi Platform</h3>
             <p>
               You can either book through our website, or if you don’t feel like
@@ -66,7 +65,7 @@ function App() {
             </p>
           </div>
           <div className="card">
-            <img src="./public/ticksec.png" />
+            <img src="/ticksec.png" />
             <h3>Recieve Crypto Gifts</h3>
             <p>
               Setup your own page to receive anonymous crypto gifts, just share
@@ -102,7 +101,6 @@ function App() {
           </div>
         </div>
       </section>
-
       <section className="gift">
         <h1>
           {" "}
@@ -112,7 +110,14 @@ function App() {
           <GiftForm />
         </div>
       </section>
-
+      <section className="recieve">
+        <h1>
+          Want to Recieve Anyonymous <span>Gifts ?</span>
+        </h1>
+        <Link to="/createprofile">
+          <button className="btnr">Create Profile</button>
+        </Link>
+      </section>
       <section id="contact" className="footer">
         <div className="footer-logo">
           <img src="./logoo.png" alt="Footer Logo" />
@@ -143,17 +148,17 @@ function App() {
           <ul>
             <li>
               <a href="">
-                <img src="./public/telegram.png" />
+                <img src="/telegram.png" />
               </a>
             </li>
             <li>
               <a href="">
-                <img src="./public/Twitter.png" />
+                <img src="/Twitter.png" />
               </a>
             </li>
             <li>
               <a href="">
-                <img src="./public/gitbook.svg" />
+                <img src="/gitbook.svg" />
               </a>
             </li>
             <li></li>
