@@ -52,7 +52,7 @@ function CreateProfile() {
             className="emailinput selections"
             placeholder="Enter UserName"
           />
-          <h6>Select Tokens you want</h6>
+          <h6>Select the coins you want to accept!</h6>
 
           <div className="costing2 selections">
             <div className="tokenrow">
@@ -169,7 +169,13 @@ function CreateProfile() {
               />
             </div>
             <div className="extrasinside">
-              <h6>TG BOT ID</h6>
+              <h6>
+                TG Bot id{" "}
+                <span>
+                  (Dm the bot on t.me/AiGiftRobot and type /code to get your
+                  code)
+                </span>
+              </h6>
 
               <input
                 id="tgbotid"

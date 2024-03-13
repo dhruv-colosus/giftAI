@@ -4,7 +4,30 @@ import GiftForm from "./components/GiftForm";
 import Navbar from "./components/Navbar";
 import { Link } from "react-router-dom";
 
+const Modal = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <span className="modal-close" onClick={onClose}>
+          &times;
+        </span>
+        <h2>Will be enabled after launch</h2>
+      </div>
+    </div>
+  );
+};
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div>
       <header>
@@ -113,9 +136,13 @@ function App() {
         <h1>
           Want to Recieve Anyonymous <span>Gifts ?</span>
         </h1>
-        <Link to="/createprofile">
-          <button className="btnr">Create Profile</button>
-        </Link>
+        {/* <Link to="/createprofile"> */}
+        <button onClick={openModal} className="btnr">
+          Create Profile
+        </button>
+        <Modal isOpen={isModalOpen} onClose={closeModal} />
+
+        {/* </Link> */}
       </section>
       <section id="contact" className="footer">
         <div className="footer-logo">
