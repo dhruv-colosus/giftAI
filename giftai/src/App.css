@@ -502,7 +502,84 @@ body {
 }
 .tokenrow {
   display: flex;
+  align-items: center;
 }
+.tokenrow p {
+  margin: 0 10px;
+  background-color: #7a7a7a31;
+  padding: 13px 20px;
+  border-radius: 5px;
+  min-width: 4rem;
+  text-align: center;
+}
+
+/* Base styles for the checkbox */
+.custom-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eeeeee51;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+/* On hover, change the background color of the custom checkbox */
+.custom-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, change the background color and add a checkmark */
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #f3214f;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 4px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .cont {
   display: inline-block;
   position: relative;
@@ -520,7 +597,7 @@ body {
   cursor: pointer;
 }
 
-.checkmark {
+.checkmark2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -536,17 +613,17 @@ body {
   background-color: #f0f0f0;
 }
 
-.cont input:checked ~ .checkmark {
+.cont input:checked ~ .checkmark2 {
   background-color: #ba0051;
 }
 
-.checkmark:after {
+.checkmark2:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.cont input:checked ~ .checkmark:after {
+.cont input:checked ~ .checkmark2:after {
   display: block;
 }
 

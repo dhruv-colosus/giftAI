@@ -39,7 +39,7 @@ function Navbar() {
           <a href="#contact">SOCIALS</a>
         </li>
       </ul>
-      <a href="" target="_blank" className="hidea">
+      <a href="https://t.me/AIGiftrobot" target="_blank" className="hidea">
         <button className="btn2">TRY THE BOT</button>
       </a>
     </div>

@@ -21,7 +21,7 @@ function App() {
               GiftAI, with the power of all the coupons available
             </p>
             <div className="buttondiv">
-              <a href="" target="_blank">
+              <a href="https://t.me/AIGiftrobot" target="_blank">
                 <button className="btn2">TRY NOW</button>
               </a>
             </div>
@@ -89,7 +89,6 @@ function App() {
             </div>
           </div>
           <div className="rightcom">
-            {" "}
             <div className="comcard">
               <h1>0+</h1>
               <h5>Active Users</h5>
@@ -131,11 +130,7 @@ function App() {
               <a href="#gift">Gift Cards</a>
             </li>
             <li>
-              <a
-                href="https://t.me/betaierc"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://t.me/AIGiftrobot" target="_blank">
                 Try Now!
               </a>
             </li>
@@ -143,25 +138,19 @@ function App() {
         </div>
         <div className="footer-social">
           <h2>
-            Our <span>Links</span>
+            Our <span>Socials</span>
           </h2>
           <ul>
             <li>
-              <a href="">
+              <a href="https://t.me/GiftAIerc" target="_blank">
                 <img src="/telegram.png" />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://x.me/giftAIerc" target="_blank">
                 <img src="/Twitter.png" />
               </a>
             </li>
-            <li>
-              <a href="">
-                <img src="/gitbook.svg" />
-              </a>
-            </li>
-            <li></li>
           </ul>
         </div>
       </section>

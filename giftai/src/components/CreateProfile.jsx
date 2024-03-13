@@ -56,8 +56,7 @@ function CreateProfile() {
 
           <div className="costing2 selections">
             <div className="tokenrow">
-              <label className="cont">
-                BNB
+              <label className="custom-checkbox">
                 <input
                   type="checkbox"
                   value="BNB"
@@ -65,6 +64,7 @@ function CreateProfile() {
                   onChange={updateGiftCard}
                 />
                 <span className="checkmark"></span>
+                <p>BTC</p>
               </label>
               <input
                 type="text"
@@ -78,8 +78,7 @@ function CreateProfile() {
               />
             </div>
             <div className="tokenrow">
-              <label className="cont">
-                ETH
+              <label className="custom-checkbox">
                 <input
                   type="checkbox"
                   value="ETH"
@@ -87,7 +86,9 @@ function CreateProfile() {
                   onChange={updateGiftCard}
                 />
                 <span className="checkmark"></span>
+                <p>ETH</p>
               </label>
+
               <input
                 type="text"
                 className={`emailinput selections ${
@@ -100,8 +101,7 @@ function CreateProfile() {
               />
             </div>
             <div className="tokenrow">
-              <label className="cont">
-                ETHARB
+              <label className="custom-checkbox">
                 <input
                   type="checkbox"
                   value="ETHARB"
@@ -109,7 +109,9 @@ function CreateProfile() {
                   onChange={updateGiftCard}
                 />
                 <span className="checkmark"></span>
+                <p>ETHARB</p>
               </label>
+
               <input
                 type="text"
                 className={`emailinput selections ${
@@ -122,8 +124,7 @@ function CreateProfile() {
               />
             </div>
             <div className="tokenrow">
-              <label className="cont">
-                SOL
+              <label className="custom-checkbox">
                 <input
                   type="checkbox"
                   value="SOL"
@@ -131,7 +132,9 @@ function CreateProfile() {
                   onChange={updateGiftCard}
                 />
                 <span className="checkmark"></span>
+                <p>SOL</p>
               </label>
+
               <input
                 type="text"
                 className={`emailinput selections ${

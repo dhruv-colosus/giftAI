@@ -39,7 +39,7 @@ function GiftForm() {
   return (
     <>
       <div className="giftcard">
-        <p id="giftcost">{selectedAmount}</p>
+        <p id="giftcost">{selectedAmount}$</p>
         <h2 id="giftcomp">{selectedGift}</h2>
       </div>
       <form
@@ -58,7 +58,7 @@ function GiftForm() {
               value="iTunes"
               checked={selectedGift === "iTunes"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
           <label className="cont">
             Walmart
@@ -68,7 +68,7 @@ function GiftForm() {
               value="Walmart"
               checked={selectedGift === "Walmart"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
           <label className="cont">
             Amazon
@@ -78,7 +78,7 @@ function GiftForm() {
               value="Amazon"
               checked={selectedGift === "Amazon"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
           <label className="cont">
             Disney
@@ -88,7 +88,7 @@ function GiftForm() {
               value="Disney"
               checked={selectedGift === "Disney"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
           <label className="cont">
             Google Play
@@ -98,7 +98,7 @@ function GiftForm() {
               value="Google Play"
               checked={selectedGift === "Google Play"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
           <label className="cont">
             Uber
@@ -108,7 +108,7 @@ function GiftForm() {
               value="Uber"
               checked={selectedGift === "Uber"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
         </div>
         <h6>Select Amount</h6>
@@ -122,7 +122,7 @@ function GiftForm() {
               value="5"
               checked={selectedAmount === "5"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
           <label className="cont">
             10$
@@ -132,7 +132,7 @@ function GiftForm() {
               value="10"
               checked={selectedAmount === "10"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
           <label className="cont">
             15$
@@ -142,7 +142,7 @@ function GiftForm() {
               value="15"
               checked={selectedAmount === "15"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
           <label className="cont">
             25$
@@ -152,7 +152,7 @@ function GiftForm() {
               value="25"
               checked={selectedAmount === "25"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
           <label className="cont">
             50$
@@ -162,7 +162,7 @@ function GiftForm() {
               value="50"
               checked={selectedAmount === "50"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
           <label className="cont">
             100$
@@ -172,7 +172,7 @@ function GiftForm() {
               value="100"
               checked={selectedAmount === "100"}
             />
-            <span className="checkmark"></span>
+            <span className="checkmark2"></span>
           </label>
         </div>
         <div className="emailing">

@@ -44,7 +44,7 @@ function Username() {
                 value="BNB"
                 checked={selectedToken === "BNB"}
               />
-              <span className="checkmark"></span>
+              <span className="checkmark2"></span>
             </label>
             <label className="cont">
               ETH
@@ -54,7 +54,7 @@ function Username() {
                 value="ETH"
                 checked={selectedToken === "ETH"}
               />
-              <span className="checkmark"></span>
+              <span className="checkmark2"></span>
             </label>
             <label className="cont">
               ETHARB
@@ -64,7 +64,7 @@ function Username() {
                 value="ETHARB"
                 checked={selectedToken === "ETHARB"}
               />
-              <span className="checkmark"></span>
+              <span className="checkmark2"></span>
             </label>
             <label className="cont">
               SOL
@@ -74,7 +74,7 @@ function Username() {
                 value="SOL"
                 checked={selectedToken === "SOL"}
               />
-              <span className="checkmark"></span>
+              <span className="checkmark2"></span>
             </label>
           </div>
           <h6>Name</h6>
