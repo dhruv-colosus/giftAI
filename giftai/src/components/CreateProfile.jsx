@@ -2,18 +2,36 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 
 function CreateProfile() {
-  const [selectedToken, setselectedToken] = useState("5");
+  const [selectedTokens, setSelectedTokens] = useState("5");
+  const [tokenAddresses, setTokenAddresses] = useState({
+    BNB: "",
+    ETH: "",
+    ETHARB: "",
+    SOL: "",
+  });
 
   const updateGiftCard = (event) => {
-    // Get selected store and amount from event.target.value
-    const { name, value } = event.target;
+    const { value, checked } = event.target;
 
-    // Update state based on the input name
-    if (name === "radio") {
-      setSelectedGift(value);
-    } else if (name === "radio2") {
-      setselectedToken(value);
+    if (
+      value === "BNB" ||
+      value === "ETH" ||
+      value === "ETHARB" ||
+      value === "SOL"
+    ) {
+      setSelectedTokens((prevSelectedTokens) =>
+        checked
+          ? [...prevSelectedTokens, value]
+          : prevSelectedTokens.filter((token) => token !== value)
+      );
     }
+  };
+
+  const handleAddressChange = (token, address) => {
+    setTokenAddresses((prevAddresses) => ({
+      ...prevAddresses,
+      [token]: address,
+    }));
   };
   return (
     <>
@@ -26,7 +44,6 @@ function CreateProfile() {
           className="makegift"
           id="giftForm"
           // onSubmit={handleFormSubmit}
-          onChange={updateGiftCard}
         >
           <h6>Username</h6>
           <input
@@ -37,47 +54,95 @@ function CreateProfile() {
           />
           <h6>Select Tokens you want</h6>
 
-          <div className="costing selections">
-            <label className="cont">
-              BNB
+          <div className="costing2 selections">
+            <div className="tokenrow">
+              <label className="cont">
+                BNB
+                <input
+                  type="checkbox"
+                  value="BNB"
+                  checked={selectedTokens.includes("BNB")}
+                  onChange={updateGiftCard}
+                />
+                <span className="checkmark"></span>
+              </label>
               <input
-                type="checkbox"
-                name="radio2"
-                value="BNB"
-                checked={selectedToken === "BNB"}
+                type="text"
+                className={`emailinput selections ${
+                  !selectedTokens.includes("BNB") ? "disabled-input" : ""
+                }`}
+                placeholder="Enter your Address"
+                value={tokenAddresses.BNB}
+                onChange={(e) => handleAddressChange("BNB", e.target.value)}
+                disabled={!selectedTokens.includes("BNB")}
               />
-              <span className="checkmark"></span>
-            </label>
-            <label className="cont">
-              ETH
+            </div>
+            <div className="tokenrow">
+              <label className="cont">
+                ETH
+                <input
+                  type="checkbox"
+                  value="ETH"
+                  checked={selectedTokens.includes("ETH")}
+                  onChange={updateGiftCard}
+                />
+                <span className="checkmark"></span>
+              </label>
               <input
-                type="checkbox"
-                name="radio2"
-                value="ETH"
-                checked={selectedToken === "ETH"}
+                type="text"
+                className={`emailinput selections ${
+                  !selectedTokens.includes("ETH") ? "disabled-input" : ""
+                }`}
+                placeholder="Enter your Address"
+                value={tokenAddresses.ETH}
+                onChange={(e) => handleAddressChange("ETH", e.target.value)}
+                disabled={!selectedTokens.includes("ETH")}
               />
-              <span className="checkmark"></span>
-            </label>
-            <label className="cont">
-              ETHARB
+            </div>
+            <div className="tokenrow">
+              <label className="cont">
+                ETHARB
+                <input
+                  type="checkbox"
+                  value="ETHARB"
+                  checked={selectedTokens.includes("ETHARB")}
+                  onChange={updateGiftCard}
+                />
+                <span className="checkmark"></span>
+              </label>
               <input
-                type="checkbox"
-                name="radio2"
-                value="ETHARB"
-                checked={selectedToken === "ETHARB"}
+                type="text"
+                className={`emailinput selections ${
+                  !selectedTokens.includes("ETHARB") ? "disabled-input" : ""
+                }`}
+                placeholder="Enter your Address"
+                value={tokenAddresses.ETHARB}
+                onChange={(e) => handleAddressChange("ETHARB", e.target.value)}
+                disabled={!selectedTokens.includes("ETHARB")}
               />
-              <span className="checkmark"></span>
-            </label>
-            <label className="cont">
-              SOL
+            </div>
+            <div className="tokenrow">
+              <label className="cont">
+                SOL
+                <input
+                  type="checkbox"
+                  value="SOL"
+                  checked={selectedTokens.includes("SOL")}
+                  onChange={updateGiftCard}
+                />
+                <span className="checkmark"></span>
+              </label>
               <input
-                type="checkbox"
-                name="radio2"
-                value="SOL"
-                checked={selectedToken === "SOL"}
+                type="text"
+                className={`emailinput selections ${
+                  !selectedTokens.includes("SOL") ? "disabled-input" : ""
+                }`}
+                placeholder="Enter your Address"
+                value={tokenAddresses.SOL}
+                onChange={(e) => handleAddressChange("SOL", e.target.value)}
+                disabled={!selectedTokens.includes("SOL")}
               />
-              <span className="checkmark"></span>
-            </label>
+            </div>
           </div>
           <div className="emailing">
             <h6>Description</h6>
