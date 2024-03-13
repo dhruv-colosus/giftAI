@@ -1,6 +1,6 @@
-// export const API_URL = "https://giftai.switcher.dev/api";
+export const API_URL = "https://giftai.io/api";
 
-export const API_URL = "http://localhost:3000";
+// export const API_URL = "http://localhost:3000";
 
 // server {
 //     listen 80;
